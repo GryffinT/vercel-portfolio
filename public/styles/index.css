@@ -121,10 +121,11 @@ body {
 }
 
 #backDisplay {
+  top: 0px;
+  overflow-wrap: anywhere;
   font-family: var(--sans);
   margin-top: 0px;
   overflow: hidden;
-  white-space: pre-wrap;
   position: absolute;
   z-index: -1;
   color: white;
