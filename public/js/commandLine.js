@@ -124,7 +124,8 @@ let help = () => {
     printBack(`iteration ${i} concluded`);
   }
   
-  printFormat(1, "This may look somewhat like a terminal but it isnt one, dont expect too much!.<br><br>" + helpMessage);
+  printFormat(1, "This may look somewhat like a terminal but it isnt one, dont expect too much! To find my projects you can <span style='font-weight: bold;'>cd</span> into the projects directory and <span style='font-weight:bold'>open</span> any of the listed projects there. No need to worry about case sensitivity either!<br><br>" + helpMessage);
+
 }
 
 let clear = () => {
@@ -161,26 +162,42 @@ let dir = () => {
 
 let cd = ( directory ) => {
   printBack(`executing cd(${directory})`);
+ 
   if ( !directory ) {
+  
     printBack(`directory -> false`);
     printBack(`setting prefix to <span style='color: olive'>gryffint@portfolio:~</span>`);
+    
     prefix = "<span style='color: olive'>gryffint@portfolio:~</span>";
+    
     printBack(`resetting workingDir to directories`);
+    
     workingDir = directories;
+  
   } else if ( Object.keys(directories).includes(directory) && !prefix.includes(directory)) {
+  
     printBack(`Object.keys(directories.includes(directory) && !prefix.includes(directory)) -> true`);
     printBack(`setting workingDir to directories[directory].name`);
+    
     workingDir = directories[directory].name;
+    
     if ( prefix.includes(directory) ) {
+    
       printBack(`prefix.includes(directory) -> true`);
       printBack(`setting prefix to prefix.substring(0, prefix.indexOf(directory) - 1`);
+      
       prefix = prefix.substring(0, prefix.indexOf(directory) - 1);
+    
     } else {
+    
       printBack(`prefix.includes(directories) -> false`);
       printBack(`setting prefix to <span style="color: olive;">/${directory}</span>`);
+      
       prefix += `<span style="color: olive;">/${directory}</span>`;
     }
+  
   } else {
+  
     printBack(`cd false`);
     print(`portfolio: cd: ${directory}: No such file or directory`)
   }
@@ -219,6 +236,20 @@ let open = (file) => {
   };
 };
 
+let whoami = () => { 
+  printFormat(2, 
+  "Name: Gryffin<br>" +
+  "Github: <a href='https://github.com/GryffinT'>link</a><br>" +
+  "==============================<br><br>" +
+  "I love programming, data science, AI, and economics.<br><br>" +
+  "-----<br>" +
+  "Tools & Languages<br>" +
+  "-----" +
+  "<ul> <li>Python</li> <li>Javascript</li> <li>HTML & CSS</li> <li>Java</li> <li>C++</li> <li>Electron</li> <li>Vercel</li> <li>Streamlit</li> </ul><br>" +
+  "==============================<br><br>",
+  );
+};
+
 const commands = {
   dir: {
     description: "Show contents of current directory",
@@ -239,6 +270,10 @@ const commands = {
   clear: {
     description: "Clears the terminal",
     run: clear
+  },
+  whoami: {
+    description: "Gives a short blurb about who I am",
+    run: whoami
   }
 };
 
