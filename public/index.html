@@ -1,77 +1,35 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gryffin T Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="./styles/index.css" rel="stylesheet">
   </head>
   <body>
-
-    <!-- Top Nav Dock -->
+    <div id="backDisplay">
+    </div>
     <nav>
-      <a href="#intro">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="...">Skills</a>
-      <a href="...">Contact</a>
+      <button>Projects</button>
+      <button>Projects</button>
+      <button>Projects</button>
     </nav>
-
-    <!-- Hero section -->
-
-    <header id="intro" class="intro">
-      <div class="spaced_bullets">
-        <div class="hero_card">
-          <p>
-            ● Software development
-          </p>
-          <p>
-            ● Web development
-          </p>
-          <p>
-            ● Fintech
-          </p>
-          <p>
-            ● Machine learning
-          </p>
+    <section id="holder">
+      <div class="commandLine" id="commandLine">
+        <div id="top" >
+         <p id="report">~</p> 
         </div>
-        <div class="headshot_card">
-          <img style="height:100%;aspect-ratio:1/1"></img>
+        <div id="appContainer">
+          
         </div>
-      </div>
-      <article style="margin-bottom: 50px;">
-        I'm Gryffin, a Computer Science student who's passionate about algorithms, machine learning, web development, 
-        fintech, and software development. Always experimenting and excited to learn new languages and best practices.
-      </article>
-
-      <!-- Functions to scroll for buttons -->
-
-      <script>
-        const projects = document.getElementById("projects");
-        const blog = document.getElementById("blog")
-
-        function seeProjects() {
-          projects.scrollIntoView({ behavior: "smooth" });
-        }
-
-        function seeBlog() {
-          blog.scrollIntoView({ behavior: "smooth"});
-        }
-      </script>
-
-      <button onclick="seeProjects" class="glow_button">See My Projects</button>
-      <button onclick="seeBlog" class="glass_button">Read My Blog</button>
-    </header>
-
-    <!-- Projects -->
-    <h1 id="projects" style="text-align:center;width:50%;color:white;justify-self:center;margin: 100px 0px 50px">Projects</h1>
-    <p style="width: 50%;color:white;justify-self: center;text-align:center">From casually to competitively, here are a few of my projects.</p>
-    <section class="project_section">
-      <div class="project_card" style="background-image: url(https://i.postimg.cc/qqmVcF72/screenshot-2025-12-16-20-13-52.png)">
-      </div>
-      <div class="project_collage">
-        <div class="project_card" style="background-image: url(https://i.postimg.cc/xTd6N8VT/screenshot-2025-12-24-01-35-18.png)">
+        <div id="receipts">
+          <div id="output"></div>
+          <div id="input-line">
+            <span id="prompt"></span>
+            <input id="receiver" autocomplete="off">
+          </div>
         </div>
-        <div class="project_card" style="background-image: url(https://i.postimg.cc/j5SQB3X7/screenshot-2025-12-24-02-03-01.png)">
-        </div>
+        <script src="./js/commandLine.js" defer></script>
       </div>
     </section>
   </body>
