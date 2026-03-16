@@ -32,7 +32,22 @@ let projects = {
     "----------<br>" +
     "Tools & Languages<br>" + 
     "----------" +
-    "<ul><li>HTML & CSS</li><li>C++</li><li>StockData API</li><li>Electron</li></ul><br>" +
+    "<ul><li>HTML & CSS</li><li>Javascript</li><li>C++</li><li>StockData API</li><li>Electron</li></ul><br>" +
+    "==========", 
+
+  "roboticswebsite-launcher": 
+    "<br>" + 
+    "===============<br>" +
+    "<span style='font-weight: bold;'>Robotics Website</span><br>" +
+    "status: <span style='color: lime'>open</span><br>" +
+    "<a href='https://github.com/GryffinT/CE-Website'>Repo</a><br>" +
+    "<a href='https://ce-website-neon.vercel.app/'>Demo</a><br>" +
+    "----------<br>" +
+    "This is the official website for the Edgewood robotics team. It was made as a club activity. It was a lot of fun slowly improving my code. When I had started I was first learning HTML and barely knew any javascript. However, since them I've become somewhat more comforable with both and have created sometime I feel proud of.<br>" +
+    "----------<br>" +
+    "Tools & Languages<br>" + 
+    "----------" +
+    "<ul><li>HTML & CSS</li><li>Javascript</li><li>Vercel</li></ul><br>" +
     "==========", 
 };
 
